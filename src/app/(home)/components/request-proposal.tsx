@@ -4,7 +4,7 @@ const RequestProposalCard = () => {
     return (
         <div className="relative flex flex-row rounded-3xl bg-positivus-grey px-16 mb-16 md:mb-36">
             <div className="flex flex-col items-center md:items-start py-16 gap-6">
-                <h3 className="text-black font-medium text-center md:text-start text-2xl md:text-3xl max-w-lg">Let's make things happen
+                <h3 className="text-black font-medium text-center md:text-start text-2xl md:text-3xl max-w-lg">Let&lsquo;s make things happen
                 </h3>
                 <p className="text-black text-base md:text-lg text-center md:text-start max-w-lg">Contact us today to learn more about
                     how our digital marketing services can
