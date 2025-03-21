@@ -1,4 +1,4 @@
-import SectionHeader from "@/components/headers/sectionHeader";
+import SectionHeader from "@/components/headers/section-header";
 
 const CaseStudies = () => {
     return (

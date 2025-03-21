@@ -1,5 +1,7 @@
-import SectionHeader from "@/components/headers/sectionHeader";
+"use client";
+import SectionHeader from "@/components/headers/section-header";
 import Image from "next/image";
+import { motion } from "motion/react";
 
 export type TeamMember = {
     name: string;
@@ -17,7 +19,11 @@ const Team = ({ teamMembers }: { teamMembers: TeamMember[] }) => {
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-10 gap-y-10">
                     {
                         teamMembers.map((member, index) => (
-                            <div key={`member-${index}`}
+                            <motion.div key={`member-${index}`}
+                                initial={{ scale: 0, opacity: 0 }}
+                                whileInView={{ scale: 1, opacity: 1 }} 
+                                viewport={{ once: true, amount: 0.6 }}
+                                transition={{ delay: index * 0.1 }}
                                 className="flex flex-col p-10 border bg-white border-black hover:shadow-xl dark:border-white border-b-8 rounded-3xl shadow-sm">
                                 <div className="relative flex flex-row gap-5">
                                     <Image src={member.imageUrl} alt={member.name} width={96} height={96} className="object-contain w-24 h-auto" />
@@ -29,7 +35,7 @@ const Team = ({ teamMembers }: { teamMembers: TeamMember[] }) => {
                                 </div>
                                 <div className="h-[1px] bg-positivus-dark my-6"></div>
                                 <p className="text-base md:text-lg">{member.description}</p>
-                            </div>
+                            </motion.div>
                         ))
                     }
                 </div>

@@ -1,12 +1,14 @@
-import SectionHeader from "@/components/headers/sectionHeader";
+"use client";
+import SectionHeader from "@/components/headers/section-header";
 import Image from "next/image";
+import { motion } from "motion/react";
 
 const Services = () => {
     return (
         <div id="services" className="flex flex-col">
             <SectionHeader title="Services" description="At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:" />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-6 md:gap-y-10 mb-16 md:mb-24">
-                <div
+                <motion.div initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true, amount: 0.6 }}
                     className="h-80 flex flex-row justify-between gap-20 p-12 border bg-positivus-grey border-black border-b-8 rounded-3xl shadow-sm">
                     <div className="flex flex-col justify-between h-full">
                         <div className="flex flex-col">
@@ -31,8 +33,8 @@ const Services = () => {
                     <div className="flex flex-col justify-center">
                         <Image alt="service-card-1-illustration" src="/images/service-card-1-illustration.png" width={224} height={224} className="w-56 h-auto object-contain" />
                     </div>
-                </div>
-                <div
+                </motion.div>
+                <motion.div initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true, amount: 0.6 }}
                     className="h-80 flex flex-row justify-between gap-20 p-12 border bg-positivus-green border-black border-b-8 rounded-3xl shadow-sm">
                     <div className="flex flex-col justify-between h-full">
                         <div className="flex flex-col">
@@ -57,8 +59,8 @@ const Services = () => {
                     <div className="flex flex-col justify-center">
                         <Image alt="service-card-2-illustration" src="/images/service-card-2-illustration.png" width={224} height={224} className="w-56 h-auto object-contain" />
                     </div>
-                </div>
-                <div
+                </motion.div>
+                <motion.div initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true, amount: 0.6 }} transition={{ delay: 0.2 }}
                     className="h-80 flex flex-row justify-between gap-20 p-12 border bg-black border-black border-b-8 rounded-3xl shadow-sm">
                     <div className="flex flex-col justify-between h-full">
                         <div className="flex flex-col">
@@ -83,8 +85,8 @@ const Services = () => {
                     <div className="flex flex-col justify-center">
                         <Image alt="service-card-3-illustration" src="/images/service-card-3-illustration.png" width={224} height={224} className="w-56 h-auto object-contain" />
                     </div>
-                </div>
-                <div
+                </motion.div>
+                <motion.div initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true, amount: 0.6 }} transition={{ delay: 0.2 }}
                     className="h-80 flex flex-row justify-between gap-20 p-12 border bg-positivus-grey border-black border-b-8 rounded-3xl shadow-sm">
                     <div className="flex flex-col justify-between h-full">
                         <div className="flex flex-col">
@@ -109,8 +111,8 @@ const Services = () => {
                     <div className="flex flex-col justify-center">
                         <Image alt="service-card-4-illustration" src="/images/service-card-4-illustration.png" width={224} height={224} className="w-56 h-auto object-contain" />
                     </div>
-                </div>
-                <div
+                </motion.div>
+                <motion.div initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true, amount: 0.6 }} transition={{ delay: 0.4 }}
                     className="h-80 flex flex-row justify-between gap-20 p-12 border bg-positivus-green border-black border-b-8 rounded-3xl shadow-sm">
                     <div className="flex flex-col justify-between h-full">
                         <div className="flex flex-col">
@@ -135,8 +137,8 @@ const Services = () => {
                     <div className="flex flex-col justify-center">
                         <Image alt="service-card-5-illustration" src="/images/service-card-5-illustration.png" width={224} height={224} className="w-56 h-auto object-contain" />
                     </div>
-                </div>
-                <div
+                </motion.div>
+                <motion.div initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true, amount: 0.6 }} transition={{ delay: 0.4 }}
                     className="h-80 flex flex-row justify-between gap-20 p-12 border bg-black border-black border-b-8 rounded-3xl shadow-sm">
                     <div className="flex flex-col justify-between h-full">
                         <div className="flex flex-col">
@@ -161,7 +163,7 @@ const Services = () => {
                     <div className="flex flex-col justify-center">
                         <Image alt="service-card-6-illustration" src="/images/service-card-6-illustration.png" width={224} height={224} className="w-56 h-auto object-contain" />
                     </div>
-                </div>
+                </motion.div>
             </div>
         </div>
     )

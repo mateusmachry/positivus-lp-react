@@ -2,13 +2,13 @@ import Hero from "@/app/(home)/components/hero";
 import NavBar from "@/app/(home)/components/navbar";
 import Brands from "@/app/(home)/components/brands";
 import Services from "@/app/(home)/components/services";
-import RequestProposalCard from "@/app/(home)/components/requestProposalCard";
-import CaseStudies from "@/app/(home)/components/caseStudies";
+import RequestProposalCard from "@/app/(home)/components/request-proposal";
+import CaseStudies from "@/app/(home)/components/case-studies";
 import OurWork from "@/app/(home)/components/ourWork";
 import Team from "@/app/(home)/components/team";
 import Testimonials from "@/app/(home)/components/testimonials";
 import { teamMembers, testimonials, accordionItems } from "@/app/(home)/data/models";
-import ContactUs from "@/app/(home)/components/contactUs";
+import ContactUs from "@/app/(home)/components/contact-us";
 import Footer from "@/app/(home)/components/footer";
 
 export default function Home() {

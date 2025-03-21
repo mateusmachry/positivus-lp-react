@@ -1,8 +1,10 @@
+"use client";
+import { motion } from "motion/react";
 import Image from "next/image";
 
 const DesktopFooter = () => {
     return (
-        <div id="footer" className="hidden md:flex flex-col bg-positivus-dark rounded-t-3xl px-16 py-12 shadow-sm">
+        <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.4 }} transition={{ duration: 0.8 }} id="footer" className="hidden md:flex flex-col bg-positivus-dark rounded-t-3xl px-16 py-12 shadow-sm">
             <div className="flex flex-row justify-between items-center mb-16">
                 <Image src="/images/logo-white.png" width={100} height={32} className="object-contain w-auto h-8" alt="Positivus Logo" />
                 <div className="flex flex-row items-center gap-10 text-white">
@@ -47,13 +49,13 @@ const DesktopFooter = () => {
                 <p className="text-lg text-white">© 2023 Positivus. All Rights Reserved.</p>
                 <a href="#" className="underline text-lg text-white">Privacy Policy</a>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
 const MobileFooter = () => {
     return (
-        <div id="footer" className="flex md:hidden mx-[-24px] flex-col bg-positivus-dark px-5 pt-12 pb-6">
+        <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.4 }} transition={{ duration: 0.8 }} id="footer" className="flex md:hidden mx-[-24px] flex-col bg-positivus-dark px-5 pt-12 pb-6">
             <div className="flex flex-col justify-center items-center mb-6">
                 <Image src="/images/logo-white.png" width={100} height={24} className="object-contain w-auto h-6 mb-8" alt="Positivus Logo" />
                 <div className="flex flex-col items-center gap-4 text-white mb-8">
@@ -98,7 +100,7 @@ const MobileFooter = () => {
                 <p className="text-base text-white">© 2023 Positivus. All Rights Reserved.</p>
                 <a href="#" className="underline text-base text-white">Privacy Policy</a>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

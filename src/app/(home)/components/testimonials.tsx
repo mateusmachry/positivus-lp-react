@@ -1,4 +1,4 @@
-import SectionHeader from "@/components/headers/sectionHeader";
+import SectionHeader from "@/components/headers/section-header";
 import Image from "next/image";
 import { LucideArrowBigLeft, LucideArrowBigRight } from "lucide-react";
 

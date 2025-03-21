@@ -1,9 +1,11 @@
+"use client";
 import { Menu } from "lucide-react";
 import Image from "next/image";
+import { motion } from "motion/react";
 
 const NavBar = () => {
     return (
-        <nav className="flex flex-row justify-between items-center mt-8 xl:mt-16">
+        <motion.nav initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} className="flex flex-row justify-between items-center mt-8 xl:mt-16">
             <Image alt="logo positivus" src='/images/logo-black.png' width={440} height={72} className="w-36 xl:w-56 h-auto object-contain" />
             <div className="hidden md:flex flex-row items-center gap-5 xl:gap-10">
                 <a href="#" className="text-black text-base xl:text-xl hover:underline">
@@ -29,7 +31,7 @@ const NavBar = () => {
             <button className="inline-block md:hidden text-black hover:text-gray-600">
                 <Menu size="2em" color="currentColor" />
             </button>
-        </nav>
+        </motion.nav>
     );
 };
 

@@ -1,6 +1,6 @@
 import { TeamMember } from "@/app/(home)/components/team";
 import { Testimonial } from "@/app/(home)/components/testimonials";
-import { AccordionItemConfig } from "@/components/accordion/accordionItems";
+import { AccordionItemConfig } from "@/components/accordion/accordion-items";
 
 export const teamMembers: TeamMember[] = [
     {

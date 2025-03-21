@@ -1,5 +1,5 @@
-import AccordionItems, { AccordionItemConfig } from "@/components/accordion/accordionItems";
-import SectionHeader from "@/components/headers/sectionHeader";
+import AccordionItems, { AccordionItemConfig } from "@/components/accordion/accordion-items";
+import SectionHeader from "@/components/headers/section-header";
 
 const OurWork = ({ accordionItems }: { accordionItems: AccordionItemConfig[] }) => {
     return (
