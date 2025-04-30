@@ -10,21 +10,28 @@ import Testimonials from "@/app/(home)/components/testimonials";
 import { teamMembers, testimonials, accordionItems } from "@/app/(home)/data/models";
 import ContactUs from "@/app/(home)/components/contact-us";
 import Footer from "@/app/(home)/components/footer";
+import Script from "next/script";
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full min-h-screen bg-white px-6 md:px-12 xl:px-24 overflow-x-hidden">
-      <NavBar />
-      <Hero />
-      <Brands />
-      <Services />
-      <RequestProposalCard />
-      <CaseStudies />
-      <OurWork accordionItems={accordionItems} />
-      <Team teamMembers={teamMembers} />
-      <Testimonials testimonials={testimonials} />
-      <ContactUs />
-      <Footer />
-    </div>
+    <>
+      <div className="flex flex-col w-full min-h-screen bg-white px-6 md:px-12 xl:px-24 overflow-x-hidden">
+        <NavBar />
+        <Hero />
+        <Brands />
+        <Services />
+        <RequestProposalCard />
+        <CaseStudies />
+        <OurWork accordionItems={accordionItems} />
+        <Team teamMembers={teamMembers} />
+        <Testimonials testimonials={testimonials} />
+        <ContactUs />
+        <Footer />
+      </div>
+      <Script
+        src="https://usevariantly.com/variantly-sdk.js"
+        strategy="beforeInteractive"
+      />
+    </>
   );
 }
