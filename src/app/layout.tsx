@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import Head from "next/head";
-import Script from "next/script";
 
 const spaceGrotesk = Space_Grotesk({
   weight: ['400', '500', '700'],
@@ -25,38 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        {/* Preconnect and DNS-prefetch */}
-        <link rel="preconnect" href="https://d3niuqph2rteir.cloudfront.net" />
-        <link rel="dns-prefetch" href="https://d3niuqph2rteir.cloudfront.net" />
-      </Head>
       <body
         className={`${spaceGrotesk.className} antialiased`}
       >
         {children}
-        <Script id="page-hide-inline-script" strategy="beforeInteractive">
-          {`
-            !function(){
-              var e="body {opacity: 0 !important;}",
-              t=document.createElement("style");
-              t.type="text/css",
-              t.id="page-hide-style",
-              t.styleSheet?t.styleSheet.cssText=e:t.appendChild(document.createTextNode(e)),
-              document.head.appendChild(t),
-              window.rmo=function(){
-                var e=document.getElementById("page-hide-style");
-                e&&(e.parentNode.removeChild(e),document.body.style.opacity="")
-              },
-              setTimeout(window.rmo,2000)
-            }();
-          `}
-        </Script>
-        {/* External async script */}
-        <Script
-          src="https://d3niuqph2rteir.cloudfront.net/client_js/stellar.js?apiKey=054cda6ceec57459874ff26986452151:574042177a3bc6b117231976432284d8bdc07cec1d80b07bb593d931264bcd44"
-          strategy="afterInteractive"
-          async
-        />
       </body>
     </html>
   );
