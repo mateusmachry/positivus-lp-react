@@ -2,8 +2,15 @@
 import { Menu } from "lucide-react";
 import Image from "next/image";
 import { motion } from "motion/react";
+import { useRouter } from "next/navigation";
 
 const NavBar = () => {
+    const router = useRouter();
+
+    function navigateToPage() {
+        router.push('/request-quote');
+    }
+
     return (
         <motion.nav initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} className="flex flex-row justify-between items-center mt-8 xl:mt-16">
             <Image alt="logo positivus" src='/images/logo-black.png' width={440} height={72} className="w-36 xl:w-56 h-auto object-contain" />
@@ -23,7 +30,7 @@ const NavBar = () => {
                 <a href="#" className="text-black text-base xl:text-xl hover:underline">
                     Blog
                 </a>
-                <button type="button"
+                <button onClick={navigateToPage} type="button"
                     className="py-2.5 xl:py-5 px-4 xl:px-8 inline-flex items-center text-base xl:text-xl rounded-xl border border-gray-800 text-black bg-transparent hover:bg-neutral-100 hover:ring-1 hover:ring-black focus:outline-none transition-all disabled:opacity-50 disabled:pointer-events-none">
                     Request a quote
                 </button>
