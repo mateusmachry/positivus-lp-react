@@ -29,7 +29,7 @@ export default function Home() {
         <Footer />
       </div>
       <Script
-        src="https://usevariantly.com/variantly.js"
+        src="https://www.usevariantly.com/variantly.js"
         strategy="beforeInteractive"
       />
     </>
