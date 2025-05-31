@@ -2,8 +2,10 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 import Script from "next/script";
+import { useRouter } from "next/navigation";
 
 export default function FirstLP() {
+    const router = useRouter();
     return (
         <>
             <div id="hero" className="grid grid-cols-1 md:grid-cols-2 my-16">
@@ -15,9 +17,9 @@ export default function FirstLP() {
                         Our digital marketing agency helps businesses grow and succeed online through a range of services
                         including SEO, PPC, social media marketing, and content creation.
                     </p>
-                    <button type="button"
+                    <button onClick={() => router.push('/request-quote')} type="button"
                         className="w-fit py-5 px-8 inline-flex items-center text-xl rounded-xl border border-transparent bg-positivus-dark text-white hover:bg-black focus:outline-none focus:bg-black disabled:opacity-50 disabled:pointer-events-none">
-                        Book a consultation
+                        Request quote
                     </button>
                 </motion.div>
                 <motion.div initial={{ x: 100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} className="hidden md:flex flex-col">
