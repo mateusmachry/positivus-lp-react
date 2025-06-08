@@ -10,7 +10,6 @@ import Testimonials from "@/app/(home)/components/testimonials";
 import { teamMembers, testimonials, accordionItems } from "@/app/(home)/data/models";
 import ContactUs from "@/app/(home)/components/contact-us";
 import Footer from "@/app/(home)/components/footer";
-import Script from "next/script";
 
 export default function Home() {
   return (
@@ -28,10 +27,6 @@ export default function Home() {
         <ContactUs />
         <Footer />
       </div>
-      <Script
-        src="https://www.usevariantly.com/variantly.js"
-        strategy="beforeInteractive"
-      />
     </>
   );
 }
