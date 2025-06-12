@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const spaceGrotesk = Space_Grotesk({
   weight: ['400', '500', '700'],
@@ -23,6 +24,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src="https://www.usevariantly.com/variantly.js"
+          strategy="beforeInteractive"
+        />
+      </head>
       <body
         className={`${spaceGrotesk.className} antialiased`}
       >
