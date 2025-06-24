@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import { HotjarSetup } from "@/lib/hotjat-setup";
 
 const spaceGrotesk = Space_Grotesk({
   weight: ['400', '500', '700'],
@@ -33,6 +34,7 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.className} antialiased`}
       >
+        <HotjarSetup />
         {children}
       </body>
     </html>
