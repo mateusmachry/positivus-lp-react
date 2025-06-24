@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <Script
-          src="https://www.usevariantly.com/variantly.js"
+          src="https://www.usevariantly.com/variantly-dev.js"
           strategy="beforeInteractive"
         />
       </head>
