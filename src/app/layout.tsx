@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <Script
-          src="https://www.usevariantly.com/variantly-dev.js"
+          src="https://heatspot-app.vercel.app/script.js"
           strategy="beforeInteractive"
         />
       </head>
